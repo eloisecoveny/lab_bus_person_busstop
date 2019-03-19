@@ -58,8 +58,7 @@ public class TestBus {
     @Test
     public void busCanPickUpPassengerFromBusStop(){
         busStop.addPersonToQueue(person);
-        Person passenger = busStop.removePersonFromQueue();
-        bus.addPassenger(passenger);
+        bus.pickUpPassengerFromBusStop(busStop);
         assertEquals(0, busStop.countQueue());
         assertEquals(1, bus.countPassengers());
     }
